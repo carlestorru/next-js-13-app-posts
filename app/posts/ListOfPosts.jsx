@@ -22,13 +22,13 @@ const fetchPosts = async () => {
 export default async function ListOfPosts () {
   const posts = await fetchPosts()
 
-  return posts.slice(0, 5).map(post => (
+  return posts.map(post => (
     <article key={post.id}>
       <Link href='/posts/[id]' as={`/posts/${post.id}`}>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
       </Link>
-      {/* <LikeButton id={post.id} /> */}
+      <LikeButton id={post.id} />
     </article>
   ))
 }
