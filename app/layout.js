@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-
+import { font } from './font.js'
 import { Navigation } from '../components/Navigation'
 
 export default function RootLayout ({ children }) {
@@ -8,7 +8,7 @@ export default function RootLayout ({ children }) {
       <head>
         <title>My first app with Next 13</title>
       </head>
-      <body>
+      <body className={font.variable}>
         <Navigation />
         {children}
       </body>
