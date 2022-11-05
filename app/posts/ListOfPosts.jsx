@@ -28,7 +28,7 @@ export default async function ListOfPosts () {
         <h2>{post.title}</h2>
         <p>{post.body}</p>
       </Link>
-      <LikeButton id={post.id} />
+      {/* <LikeButton id={post.id} /> */}
     </article>
   ))
 }

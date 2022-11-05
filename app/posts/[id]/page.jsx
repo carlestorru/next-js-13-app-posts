@@ -1,22 +1,3 @@
-const fetchPost = async (id) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    next: {
-      revalidate: 60
-    }
-  })
-  const data = await res.json()
-
-  return data
-}
-
-export default async function Post ({ params }) {
-  const { id } = params
-  const post = await fetchPost(id)
-
-  return (
-    <article>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
-    </article>
-  )
+export default function PostPage () {
+  return null
 }
