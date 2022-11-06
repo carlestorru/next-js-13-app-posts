@@ -7,7 +7,7 @@ export function LikeButton ({ id }) {
 
   return (
     <button onClick={() => setLiked(!liked)}>
-      {liked ? 'Like' : 'Dislike'}
+      {liked ? 'Like 👍' : 'Dislike 👎'}
     </button>
   )
 }
